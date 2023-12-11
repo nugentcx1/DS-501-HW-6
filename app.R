@@ -44,7 +44,6 @@ server <- function(input, output) {
   output$regPlots <- renderUI({
 
     if (length(input$x) > 0) {
-      # Create a scatter plot of the residuals for each predictor
       plot_output_list <- lapply(input$x, function(x) {
         plotOutput(paste("plot_", x, sep = ""))
       })
